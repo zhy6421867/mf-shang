@@ -1,0 +1,54 @@
+<template>
+	<view>
+		<view>
+			<uni-card>
+				<text class="content-box-text">实事掌握  生态建设</text>
+				<text class="content-box-text">有限的生命力  无限的全球熵</text>
+			</uni-card>
+		</view>
+		<view>
+			<!-- <uni-grid :column="2">
+				<uni-grid-item :index="0">
+					<view class="grid-item-box">
+						<text>1</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item :index="1">
+					<view class="grid-item-box">
+						<text>1</text>
+					</view>
+				</uni-grid-item>
+			</uni-grid> -->
+			<uni-list>
+				<uni-list-item :showArrow="false">
+					<text>区块链浏览器</text>
+				</uni-list-item>
+				<uni-list-item :showArrow="false">
+					<text>联系客服</text>
+				</uni-list-item>
+				<uni-list-item :showArrow="false">
+					<text>Entropy Pro</text>
+				</uni-list-item>
+				<uni-list-item :showArrow="false">
+					<text>我要申请</text>
+				</uni-list-item>
+				<uni-list-item :showArrow="false">
+					<text>第三方平台</text>
+				</uni-list-item>
+				<uni-list-item :showArrow="false">
+					<text>第三方钱包</text>
+				</uni-list-item>
+			</uni-list>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+
+</style>

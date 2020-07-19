@@ -1,0 +1,37 @@
+<template>
+	<view>
+		<view>
+			<uni-card>
+				<text class="content-box-text">资产折合</text>
+				<text class="content-box-text">0.0000</text>
+				<text class="content-box-text">￥0.0000</text>
+			</uni-card>
+		</view>
+		<view>
+			<uni-card>
+				<uni-list>
+					<uni-list-item>
+						<text>USDT交易规则调整</text>
+					</uni-list-item>
+				</uni-list>
+			</uni-card>
+		</view>
+		<view>
+			<uni-card>
+				<text class="content-box-text">激活账户</text>
+				<text class="content-box-text">授信令牌是社区身份的标识，在Entropy网络及各类延展DAPP中具有无障碍的通行能力和资产行使权力，未来Entropy还将在生态圈内外拥有各类服务特权，广泛用于互联网乃至实体经济中。</text>
+				<button type="primary">立即激活</button>
+			</uni-card>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+
+</style>

@@ -1,8 +1,8 @@
 {
 	"pages": [
-		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages\
 		{
-			"path": "pages/tabBar/component/component",
+			"path": "pages/guide/index",
 			"style": {
 				"navigationBarTitleText": "首页",
 				"app-plus": {
@@ -18,8 +18,25 @@
 				}
 			}
 		},
+		// {
+		// 	"path": "pages/tabBar/component/component",
+		// 	"style": {
+		// 		"navigationBarTitleText": "首页",
+		// 		"app-plus": {
+		// 			"bounce": "vertical",
+		// 			"titleNView": {
+		// 				"buttons": [{
+		// 					"text": "\ue534",
+		// 					"fontSrc": "/static/uni.ttf",
+		// 					"fontSize": "22px",
+		// 					"color": "#FFFFFF"
+		// 				}]
+		// 			}
+		// 		}
+		// 	}
+		// },
 		{
-			"path": "pages/tabBar/API/API",
+			"path": "pages/ecology/index",
 			"style": {
 				"navigationBarTitleText": "生态建设",
 				"app-plus": {
@@ -35,9 +52,9 @@
 			}
 		},
 		{
-			"path": "pages/tabBar/template/template",
+			"path": "pages/wallet/index",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "熵值交易",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -51,9 +68,9 @@
 			}
 		},
 		{
-			"path": "pages/tabBar/extUI/extUI",
+			"path": "pages/user/index",
 			"style": {
-				"navigationBarTitleText": "熵值交易",
+				"navigationBarTitleText": "我的",
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -1159,8 +1176,8 @@
 		"navigationBarTitleText": "Entropy",
 		"navigationBarBackgroundColor": "#070611",
 		"backgroundColor": "#070611",
-		"backgroundColorTop": "#F4F5F6",
-		"backgroundColorBottom": "#F4F5F6",
+		"backgroundColorTop": "#070611",
+		"backgroundColorBottom": "#070611",
 		"mp-360": {
 			"navigationStyle": "custom"
 		},
@@ -1172,23 +1189,23 @@
 		"borderStyle": "black",
 		"backgroundColor": "#010102",
 		"list": [{
-				"pagePath": "pages/tabBar/component/component",
+				"pagePath": "pages/guide/index",
 				"iconPath": "static/component.png",
 				"selectedIconPath": "static/componentHL.png",
 				"text": "首页"
 			},
 			{
-				"pagePath": "pages/tabBar/API/API",
+				"pagePath": "pages/ecology/index",
 				"iconPath": "static/img/tab/ecology.png",
 				"selectedIconPath": "static/img/tab/ecologys.png",
 				"text": "生态建设"
 			}, {
-				"pagePath": "pages/tabBar/extUI/extUI",
+				"pagePath": "pages/wallet/index",
 				"iconPath": "static/extui.png",
 				"selectedIconPath": "static/extuiHL.png",
 				"text": "熵值交易"
 			}, {
-				"pagePath": "pages/tabBar/template/template",
+				"pagePath": "pages/user/index",
 				"iconPath": "static/img/tab/user.png",
 				"selectedIconPath": "static/img/tab/users.png",
 				"text": "我的"
