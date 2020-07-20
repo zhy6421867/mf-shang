@@ -2,21 +2,16 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages\
 		{
-			"path": "pages/guide/index",
+			"path": "pages/home/index",
 			"style": {
 				"navigationBarTitleText": "首页",
 				"app-plus": {
 					"bounce": "vertical",
 					"titleNView": {
-						"buttons": [{
-							"text": "\ue534",
-							"fontSrc": "/static/uni.ttf",
-							"fontSize": "22px",
-							"color": "#FFFFFF"
-						}]
+						
 					}
 				}
-			}
+			} 	
 		},
 		// {
 		// 	"path": "pages/tabBar/component/component",
@@ -1189,15 +1184,15 @@
 		"borderStyle": "black",
 		"backgroundColor": "#010102",
 		"list": [{
-				"pagePath": "pages/guide/index",
-				"iconPath": "static/component.png",
-				"selectedIconPath": "static/componentHL.png",
+				"pagePath": "pages/home/index",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home-on.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/ecology/index",
-				"iconPath": "static/img/tab/ecology.png",
-				"selectedIconPath": "static/img/tab/ecologys.png",
+				"iconPath": "static/ecology.png",
+				"selectedIconPath": "static/ecologys.png",
 				"text": "生态建设"
 			}, {
 				"pagePath": "pages/wallet/index",
@@ -1206,8 +1201,8 @@
 				"text": "熵值交易"
 			}, {
 				"pagePath": "pages/user/index",
-				"iconPath": "static/img/tab/user.png",
-				"selectedIconPath": "static/img/tab/users.png",
+				"iconPath": "static/user.png",
+				"selectedIconPath": "static/users.png",
 				"text": "我的"
 			}
 		]
