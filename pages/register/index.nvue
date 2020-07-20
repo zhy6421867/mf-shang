@@ -1,0 +1,41 @@
+<template>
+	<view class="register-index">
+		<button>导入身份</button>
+		<text class="register-tips">已拥有钱包</text>
+		<text class="register-or">OR</text>
+		<button>创建身份</button>
+		<text class="register-tips">第一次使用钱包</text>
+		<view class="register-index-fc">
+			<view class="register-index-lang">
+				<text>简体中文</text>
+			</view>
+			<view class="register-index-login">
+				<text>已有账号，去登录</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+.register-index {
+	padding-top: 200px;
+}
+.register-index-fc {
+	margin-top: 20px;
+	padding: 0 15px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.register-tips {
+	text-align: center;
+}
+.register-or {
+	text-align: center;
+}
+</style>

@@ -1,0 +1,28 @@
+<template>
+	<view>
+		<form class="register-form">
+			<view class="uni-form-item uni-column">
+				<input class="uni-input" name="nickname" placeholder="请输入用户ID" />
+			</view>
+			<view class="uni-form-item uni-column">
+				<input class="uni-input" name="nickname" placeholder="钱包密码" />
+			</view>
+			<view class="uni-btn-v">
+				<button form-type="submit">登录</button>
+			</view>
+		</form>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+.register-form {
+	padding: 12px 15px;
+	box-sizing: border-box;
+}
+</style>

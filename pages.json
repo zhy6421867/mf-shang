@@ -13,69 +13,48 @@
 				}
 			} 	
 		},
-		// {
-		// 	"path": "pages/tabBar/component/component",
-		// 	"style": {
-		// 		"navigationBarTitleText": "首页",
-		// 		"app-plus": {
-		// 			"bounce": "vertical",
-		// 			"titleNView": {
-		// 				"buttons": [{
-		// 					"text": "\ue534",
-		// 					"fontSrc": "/static/uni.ttf",
-		// 					"fontSize": "22px",
-		// 					"color": "#FFFFFF"
-		// 				}]
-		// 			}
-		// 		}
-		// 	}
-		// },
 		{
 			"path": "pages/ecology/index",
 			"style": {
-				"navigationBarTitleText": "生态建设",
-				"app-plus": {
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue534",
-							"fontSrc": "/static/uni.ttf",
-							"fontSize": "22px",
-							"color": "#FFFFFF"
-						}]
-					}
-				}
+				"navigationBarTitleText": "生态建设"
 			}
 		},
 		{
 			"path": "pages/wallet/index",
 			"style": {
-				"navigationBarTitleText": "熵值交易",
-				"app-plus": {
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue534",
-							"fontSrc": "/static/uni.ttf",
-							"fontSize": "22px",
-							"color": "#FFFFFF"
-						}]
-					}
-				}
+				"navigationBarTitleText": "熵值交易"
 			}
 		},
 		{
 			"path": "pages/user/index",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/register/index",
+			"style": {
 				"app-plus": {
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue534",
-							"fontSrc": "/static/uni.ttf",
-							"fontSize": "22px",
-							"color": "#FFFFFF"
-						}]
-					}
+					"titleNView": false
 				}
+			}
+		},
+		{
+			"path": "pages/register/restore",
+			"style": {
+				"navigationBarTitleText": "导入身份"
+			}
+		},
+		{
+			"path": "pages/register/create",
+			"style": {
+				"navigationBarTitleText": "创建钱包"
+			}
+		},
+		{
+			"path": "pages/register/login",
+			"style": {
+				"navigationBarTitleText": "登录"
 			}
 		},
 		{

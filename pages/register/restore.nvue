@@ -1,0 +1,112 @@
+<template>
+	<view class="retore-body">
+		<view class="retore-btns">
+			<button type="default" class="retore-btn" @click="change(0)">助记词</button>
+			<button type="default" class="retore-btn" @click="change(1)">keystore</button>
+			<button type="default" class="retore-btn" @click="change(2)">私钥</button>
+		</view>
+		<view class="restore-panel" v-show="active === 0">
+			<form>
+				<view class="uni-form-item uni-column">
+					<view class="uni-textarea">
+						<textarea placeholder="输入助记词单词,并使用空格分隔"/>
+					</view>
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">账户名称</view>
+					<input class="uni-input" name="nickname" placeholder="请输入账户名称" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">设置密码</view>
+					<input class="uni-input" name="nickname" placeholder="请输入钱包密码" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">确认密码</view>
+					<input class="uni-input" name="nickname" placeholder="请再次输入钱包密码" />
+				</view>
+				<view class="uni-btn-v">
+					<button form-type="submit">开始导入</button>
+				</view>
+			</form>
+		</view>
+		<view class="restore-panel" v-show="active === 1">
+			<tex>复制粘贴官方钱包的 Keystore 文件内容至输入框</tex>
+			<form>
+				<view class="uni-form-item uni-column">
+					<view class="uni-textarea">
+						<textarea placeholder="Keystore文件内容"/>
+					</view>
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">账户名称</view>
+					<input class="uni-input" name="nickname" placeholder="请输入账户名称" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">Keystore 密码</view>
+					<input class="uni-input" name="nickname" placeholder="请输入 Keystore 密码" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">确认 Keystore 密码</view>
+					<input class="uni-input" name="nickname" placeholder="请再次输入 Keystore 密码" />
+				</view>
+				<view class="uni-btn-v">
+					<button form-type="submit">开始导入</button>
+				</view>
+			</form>
+		</view>
+		<view class="restore-panel" v-show="active === 2">
+			<tex>输入 Private Key 至输入框</tex>
+			<form>
+				<view class="uni-form-item uni-column">
+					<view class="uni-textarea">
+						<textarea placeholder="输入 Private Key 至输入框"/>
+					</view>
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">账户名称</view>
+					<input class="uni-input" name="nickname" placeholder="请输入账户名称" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">设置密码</view>
+					<input class="uni-input" name="nickname" placeholder="请输入钱包密码" />
+				</view>
+				<view class="uni-form-item uni-column">
+					<view class="title">确认密码</view>
+					<input class="uni-input" name="nickname" placeholder="请再次输入钱包密码" />
+				</view>
+				<view class="uni-btn-v">
+					<button form-type="submit">开始导入</button>
+				</view>
+			</form>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data () {
+			return {
+				active: 0
+			}
+		},
+		methods: {
+			change (index) {
+				if (this.active !== index) {
+					this.active = index
+				}
+			}
+		}
+	}
+</script>
+
+<style>
+.retore-body {
+	margin: 0 15px;
+}
+.retore-btns {
+	flex-direction: row;
+}
+.retore-btn {
+	flex: 1;
+}
+</style>
