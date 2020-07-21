@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 
+import VueClipboard from 'vue-clipboard2'							// 点击复制组件
+
 import pageHead from './components/page-head.vue'
 import pageFoot from './components/page-foot.vue'
 import uLink from '@/components/uLink.vue'
@@ -19,6 +21,7 @@ Vue.prototype.$adpid = "1111111111"
 Vue.component('page-head', pageHead)
 Vue.component('page-foot', pageFoot)
 Vue.component('uLink', uLink)
+Vue.use(VueClipboard)												// 插入复制组件
 
 App.mpType = 'app'
 
