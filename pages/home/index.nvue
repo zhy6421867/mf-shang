@@ -1,19 +1,19 @@
 <template>
 	<view class="main">
 		<view>
-			<div class="card">
-				<div class="card-body">
-					<div class="card-body-title">
+			<view class="card">
+				<view class="card-body">
+					<view class="card-body-title">
 						资产折合 
-						<uni-icons @click="handleTabEye(0)" v-if="eyeState" class="card-body-title-icon" type="eye" color="#ffffff" size="20"></uni-icons>
-						<uni-icons @click="handleTabEye(1)" v-else class="card-body-title-icon" type="eye-slash" color="#ffffff" size="20"></uni-icons>
-					</div>
-					<div class="card-body-text">{{eyeState ? 0.0000 : '***'}}</div>
-					<div class="card-body-conversion">￥{{eyeState ? 0.0000 : '***'}}</div>
-				</div>
-			</div>
+						<uni-icons @click="handleTabEye(0)" class="card-body-title-icon" type="eye" v-if="eyeState" color="#ffffff" size="20"></uni-icons>
+						<uni-icons @click="handleTabEye(1)" class="card-body-title-icon" type="eye-slash" v-else color="#ffffff" size="20"></uni-icons>
+					</view>
+					<view class="card-body-text">{{eyeState ? 0.0000 : '***'}}</view>
+					<view class="card-body-conversion">￥{{eyeState ? 0.0000 : '***'}}</view>
+				</view>
+			</view>
 		</view>
-		<view class="notice"> 
+		<view class="notice">
 			<view class="notice-body">
 				<uni-notice-bar color="#ffffff" background-color="rgba(255, 255, 255, 0.14)" :show-get-more="true" :scrollable="true" :show-icon="true" :single="true" text="年末大礼：uni-app1.4 新增百度、支付宝小程序。插件市场重磅上线！" @getmore="getMore" />
 			</view>
@@ -24,9 +24,9 @@
 			<view class="info-submit">立即激活</view>
 		</view>
 		<view class="timg"></view>
-		
-		<image class="image-code" src="./image/code.png" mode="code.png" />
-		 
+
+		<image class="image-code" @click="handleCollection" src="./image/code.png" mode="code.png" />
+
 	</view>
 </template>
 
@@ -43,6 +43,11 @@
 			this.handleLoad()
 		},
 		methods: {
+			handleCollection() { 
+				uni.navigateTo({
+					url: '/pages/home/collection/index'
+				})
+			}, 
 			handleLoad: function() {
 				uni.showLoading({
 					title:"加载中...."
@@ -55,17 +60,17 @@
 						console.log(response)
 					},
 					fail: (response) => {
-			
+
 					},
 					complete: () => {
 						uni.hideLoading();
 					}
 				});
 			},
-			handleShowCode() { 
+			handleShowCode() {
 				this.$refs.popup.open()
 			},
-			handleTabEye(index) { 
+			handleTabEye(index) {
 				this.eyeState = index == 0 ? false : true
 			}
 		}
@@ -77,11 +82,11 @@
 	height: 96vh;
 	overflow: scroll;
 	background: #000000;
-}	
+}
 .card-body{
 	width: 340px;
 	height: 150px;
-	margin: 0 auto; 
+	margin: 0 auto;
 	color: #ffffff;
 	text-align: center;
 	box-sizing: border-box;
@@ -90,9 +95,12 @@
 .card-body-title{
 	font-size: 16px;
 	padding-top: 26px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: unset;
 }
-.card-body-title-icon{
-	margin-left: 10px;
+.card-body-title-icon{ 
+	margin-left: 6px;
 }
 .card-body-text{
 	font-size: 22px;
@@ -103,17 +111,17 @@
 }
 .notice{
 	width: 340px;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
 .info{
 	width: 340px;
-	margin: 0 auto; 
+	margin: 0 auto;
 	color: #ffffff;
 	padding: 12px 12px 16px 12px;
 	margin-top: 20px;
 	z-index: 999999;
 	background-color: rgba(255, 255, 255, 0.14)
-} 
+}
 .info-title{
 	font-size: 16px;
 }
@@ -130,19 +138,19 @@
 	background-color: #409EFF
 }
 .timg {
-	height: 180px; 
+	height: 180px;
 	position: fixed;
 	left: 0px;
 	right: 0px;
-	bottom: 0px; 
+	bottom: 0px;
 	/* background: url('./image/webp.webp') center; */
 }
 .image-code{
 	width: 22px;
 	height: 22px;
-	position: fixed; 
+	position: fixed;
 	right: 10px;
 	top: 10px;
 	z-index: 999;
-} 
+}
 </style>

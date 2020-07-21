@@ -1,0 +1,113 @@
+<template>
+	<view class="main"> 
+		<view class="title">
+			ETH
+		</view>
+		<view class="collection">
+			<view class="collection-hander">
+				<image src="../../../static/app-plus/uni@2x.png" />
+				<text>保存到相册</text>
+			</view>
+			<view class="collection-body">
+				<view class="collection-body-title">
+					充币地址
+				</view>
+				<view class="collection-body-title">
+					56445156453156
+				</view>
+				<view class="collection-body-copy">
+					<image src="../image/copy.png" mode=""></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import mixins from '../../../common/mixin';
+	export default {
+        mixins: [mixins],
+		data() {
+			return {
+				eyeState: true
+			}
+		},
+		onLoad:function(){
+			
+		},
+		methods: {
+			handleLoad: function() {
+				uni.showLoading({
+					title:"加载中...."
+				})
+				this.request({
+					url: 'api/news',
+					method: 'GET',
+					data: {},
+					success: (response) => {
+						console.log(response)
+					},
+					fail: (response) => {
+
+					},
+					complete: () => {
+						uni.hideLoading();
+					}
+				});
+			},
+			handleShowCode() {
+				this.$refs.popup.open()
+			},
+			handleTabEye(index) {
+				this.eyeState = index == 0 ? false : true
+			}
+		}
+	}
+</script>
+
+<style scoped>
+.main {  
+	color: #ffffff;
+	padding: 20px;
+} 
+.title{
+	padding: 6px 8px;
+	border-radius: 4px;
+	background-color: #000000;
+}
+.collection{
+	padding: 6px 8px;
+	margin-top: 20px;
+	border-radius: 4px;
+	background-color: #000000;
+}
+.collection-hander{
+	
+}
+.collection-hander image{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 20px auto 10px auto;
+}
+.collection-hander text{ 
+	color: #ffffff;
+	width: 100px;
+	margin: 10px auto 10px auto;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: #409EFF
+}
+.collection-body{
+	text-align: center;
+}
+.collection-body-copy image{
+	width: 38px;
+	height: 38px;
+	padding: 8px;
+	margin: 6px auto 10px auto;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.14)
+} 
+</style>
