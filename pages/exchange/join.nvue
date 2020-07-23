@@ -1,0 +1,68 @@
+<template>
+	<view>
+		<view>
+			<uni-card>
+				<text class="content-box-text">创建全新理念</text>
+				<text class="content-box-text">当前交易价格：1ETV ≈ 7.272000 USDE</text>
+			</uni-card>
+		</view>
+		<view class="join-box">
+			<text>参与认购</text>
+			<text>购买金额</text>
+			<view class="join-btns">
+				<button>100USDE</button>
+				<button>500USDE</button>
+				<button>1000USDE</button>
+			</view>
+			<view class="join-info">
+				<text>可用</text>
+				<text class="join-info__total">0.000000 USDE</text>
+				<text>还没有 USDE？</text>
+				<text>去获取</text>
+			</view>
+			<view><button>立即购买</button></view>
+			<text class="join-tip">可获得 50 初始源进入认购账户</text>
+			<view>
+				<text>我的认购</text>
+				<view class="join-list-header">
+					<text>时间</text>
+					<text>类型</text>
+					<text>购买数量</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style scoped>
+	.content-box-text {
+		text-align: center;
+	}
+	.join-box {
+		margin: 0 15px;
+	}
+	.join-btns {
+		flex-direction: row;
+	}
+	.join-info {
+		flex-direction: row;
+	}
+	.join-info__total {
+		flex: 1;
+	}
+	.join-tip {
+		text-align: center;
+	}
+	.join-list-header {
+		flex-direction: row;
+	}
+	.join-list-header text {
+		flex: 1;
+	}
+</style>

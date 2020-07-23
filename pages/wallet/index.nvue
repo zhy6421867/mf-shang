@@ -2,35 +2,61 @@
 	<view>
 		<view>
 			<uni-card>
+				<text class="content-box-text">总余额（USDE）</text>
+				<text class="content-box-text">0.0000</text>
+				<view class="wallet-links">
+					<view class="wallet-links-item">
+						<text>提币</text>
+					</view>
+					<view class="wallet-links-item">
+						<text>划转</text>
+					</view>
+				</view>
 			</uni-card>
 		</view>
-		<view>
-			<uni-card>
-				<uni-list>
-					<uni-list-item>
-						<text>我的订单</text>
-					</uni-list-item>
-				</uni-list>
-			</uni-card>
-		</view>
-		<view>
-			<uni-grid :column="2">
-				<button type="primary" :index="0">买入</button>
-				<button type="primary" :index="1">卖出</button>
-			</uni-grid>
-		</view>
-		<view>
-			<uni-card>
-				<uni-list>
-					<uni-list-item :showArrow="false">
-						<text>数量：46ETV</text>
-						<text>单价：7.100000 USDT</text>
-						<template v-slot:right="">
-							50.00USDE
-						</template>
-					</uni-list-item>
-				</uni-list>
-			</uni-card>
+		<view class="list">
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						初始源
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						熵值
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						动力源
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						助力源
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						储能池
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<view class="list-item-text">
+						USDE
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -41,6 +67,41 @@
 	}
 </script>
 
-<style>
-
+<style scoped>
+	.content-box-text {
+		text-align: center;
+	}
+	.wallet-links {
+		display: flex;
+		flex-direction: row;
+	}
+	.wallet-links-item {
+		flex: 1;
+		text-align: center;
+	}
+	.list{
+		margin: 15px;
+		flex-wrap: wrap;
+		flex-direction: initial;
+	}
+	.list .list-item{
+		width: 50%; 
+		color: #ffffff;
+		text-align: center;
+		padding: 5px;
+	}
+	.list-item-box{
+		padding: 20px 0px;
+		border-radius: 10px;
+		background-color: #000000;
+	}
+	.list-item-icon{
+		width: 50px;
+		height: 50px; 
+		margin: 0 auto;
+		display: inline-block;
+	}
+	/* .list-item-text{
+		padding-top: 10px;
+	} */
 </style>
