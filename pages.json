@@ -7,11 +7,15 @@
 				"navigationBarTitleText": "首页",
 				"app-plus": {
 					"bounce": "vertical",
-					"titleNView": {
-						
-					}
+					"titleNView": {}
 				}
 			} 	
+		}, 
+		{
+			"path": "pages/home/collection/index", 
+			"style": {
+				"navigationBarTitleText": "收款码"
+			}
 		},
 		{
 			"path": "pages/ecology/index",

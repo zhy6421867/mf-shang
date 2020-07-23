@@ -2,11 +2,60 @@
 	<view>
 		<view>
 			<uni-card>
-				<text class="content-box-text">实事掌握  生态建设</text>
+				<text class="content-box-text" style="font-weight: bold;">实事掌握  生态建设</text>
 				<text class="content-box-text">有限的生命力  无限的全球熵</text>
 			</uni-card>
 		</view>
-		<view>
+		<view class="list">
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						区块浏览器
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						联系客服
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						Entropy Pro
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						我要申请
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						第三方平台
+					</view>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-box">
+					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<view class="list-item-text">
+						第三方钱包
+					</view>
+				</view>
+			</view>
+		</view>
 			<!-- <uni-grid :column="2">
 				<uni-grid-item :index="0">
 					<view class="grid-item-box">
@@ -19,7 +68,7 @@
 					</view>
 				</uni-grid-item>
 			</uni-grid> -->
-			<uni-list>
+			<!-- <uni-list>
 				<uni-list-item :showArrow="false">
 					<text>区块链浏览器</text>
 				</uni-list-item>
@@ -38,8 +87,7 @@
 				<uni-list-item :showArrow="false">
 					<text>第三方钱包</text>
 				</uni-list-item>
-			</uni-list>
-		</view>
+			</uni-list> -->
 	</view>
 </template>
 
@@ -49,6 +97,30 @@
 	}
 </script>
 
-<style>
-
+<style scoped>
+	.list{
+		margin: 15px;
+		flex-wrap: wrap;
+		flex-direction: initial;
+	}
+	.list .list-item{
+		width: 50%; 
+		color: #ffffff;
+		text-align: center;
+		padding: 5px;
+	}
+	.list-item-box{
+		padding: 20px 0px;
+		border-radius: 10px;
+		background-color: #000000;
+	}
+	.list-item-icon{
+		width: 50px;
+		height: 50px; 
+		margin: 0 auto;
+		display: inline-block;
+	}
+	.list-item-text{
+		padding-top: 10px;
+	} 
 </style>
