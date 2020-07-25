@@ -1,0 +1,46 @@
+<template>
+	<view>
+		<view>
+			<uni-card>
+			</uni-card>
+		</view>
+		<view>
+			<uni-card>
+				<uni-list>
+					<uni-list-item>
+						<text>我的订单</text>
+					</uni-list-item>
+				</uni-list>
+			</uni-card>
+		</view>
+		<view>
+			<uni-grid :column="2">
+				<button type="primary" :index="0">买入</button>
+				<button type="primary" :index="1">卖出</button>
+			</uni-grid>
+		</view>
+		<view>
+			<uni-card>
+				<uni-list>
+					<uni-list-item :showArrow="false">
+						<text>数量：46ETV</text>
+						<text>单价：7.100000 USDT</text>
+						<template v-slot:right="">
+							50.00USDE
+						</template>
+					</uni-list-item>
+				</uni-list>
+			</uni-card>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+
+</style>
