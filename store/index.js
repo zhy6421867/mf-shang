@@ -8,9 +8,11 @@ const store = new Vuex.Store({
 		hasLogin: false,
 		loginProvider: "",
 		openid: null,
-		testvuex:false,
-        colorIndex: 0,
-        colorList: ['#FF0000','#00FF00','#0000FF']
+		testvuex: false,
+		colorIndex: 0,
+		colorList: ['#FF0000', '#00FF00', '#0000FF'],
+		createObj: {},
+		mnemonicCodeList: []
 	},
 	mutations: {
 		login(state, provider) {
@@ -24,24 +26,30 @@ const store = new Vuex.Store({
 		setOpenid(state, openid) {
 			state.openid = openid
 		},
-		setTestTrue(state){
+		setTestTrue(state) {
 			state.testvuex = true
 		},
-		setTestFalse(state){
+		setTestFalse(state) {
 			state.testvuex = false
 		},
-        setColorIndex(state,index){
-            state.colorIndex = index
-        }
+		setColorIndex(state, index) {
+			state.colorIndex = index
+		},
+		setCreateObj(state, data) {
+			state.createObj = Object.assign({}, data)
+		},
+		setMnemonicCodeList(state, data) {
+			state.mnemonicCodeList = data
+		}
 	},
-    getters:{
-        currentColor(state){
-            return state.colorList[state.colorIndex]
-        }
-    },
+	getters: {
+		currentColor(state) {
+			return state.colorList[state.colorIndex]
+		}
+	},
 	actions: {
 		// lazy loading openid
-		getUserOpenId: async function ({
+		getUserOpenId: async function({
 			commit,
 			state
 		}) {
@@ -52,7 +60,7 @@ const store = new Vuex.Store({
 					uni.login({
 						success: (data) => {
 							commit('login')
-							setTimeout(function () { //模拟异步请求服务器获取 openid
+							setTimeout(function() { //模拟异步请求服务器获取 openid
 								const openid = '123456789'
 								console.log('uni.request mock openid[' + openid + ']');
 								commit('setOpenid', openid)

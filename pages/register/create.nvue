@@ -1,23 +1,23 @@
 <template>
 	<view class="common-body">
-		<form class="register-form" @submit="createAccount">
+		<form @submit="createAccount">
 			<view class="uni-form-item uni-column">
-				<input class="uni-input" name="Add_PassportName" placeholder="请输入账户名" />
+				<input class="uni-input register-input-item" name="Add_PassportName" placeholder="请输入账户名" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input" name="Password" placeholder="请输入8-16位钱包密码" />
+				<input class="uni-input register-input-item" name="Password" placeholder="请输入8-16位钱包密码" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input" name="ConfirmPassword" placeholder="重复输入密码" />
+				<input class="uni-input register-input-item" name="ConfirmPassword" placeholder="重复输入密码" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input" name="AdvancedPassword" placeholder="请输入8-16位支付密码" />
+				<input class="uni-input register-input-item" name="AdvancedPassword" placeholder="请输入8-16位支付密码" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input" name="ConfirmAdvancedPassword" placeholder="重复输入支付密码" />
+				<input class="uni-input register-input-item" name="ConfirmAdvancedPassword" placeholder="重复输入支付密码" />
 			</view>
 			<view class="uni-btn-v">
-				<button form-type="submit">创建</button>
+				<button form-type="submit" class="common-form-btn">创建</button>
 			</view>
 		</form>
 	</view>
@@ -25,32 +25,37 @@
 
 <script>
 	import mixins from '../../common/mixin';
+	import {
+	    mapMutations
+	} from 'vuex'
 	export default {
 		mixins: [mixins],
 		methods: {
+			...mapMutations(['setCreateObj']),
 			createAccount: function(e) {
 				console.log(e.detail.value)
-				this.request({
-					url: 'accounts/market/register',
-					method: 'GET',
-					data: {
-						cmd: 'saveRegV2',
-						...e.detail.value
-					},
-					success: (response) => {
-						console.log(response)
-					},
-					fail: (response) => {},
-					complete: () => {}
+				this.setCreateObj(e.detail.value)
+				uni.navigateTo({
+					url: '/pages/register/get-mnemonic-code'
 				})
+				// this.request({
+				// 	url: 'accounts/market/register',
+				// 	method: 'GET',
+				// 	data: {
+				// 		cmd: 'saveRegV2',
+				// 		...e.detail.value
+				// 	},
+				// 	success: (response) => {
+				// 		console.log(response)
+				// 	},
+				// 	fail: (response) => {},
+				// 	complete: () => {}
+				// })
 			}
 		}
 	}
 </script>
 
 <style>
-	.register-form {
-		padding: 12px 15px;
-		box-sizing: border-box;
-	}
+
 </style>

@@ -3,21 +3,41 @@
 		<text class="mnemonic-text">
 			请按顺序点击你的助记词，以便确认备份助记词的正确。
 		</text>
-		<view class="mnemonic-textarea">
+		<!-- <view class="mnemonic-textarea">
 			<textarea />
+		</view> -->
+		<view
+			class="mnemonic-textarea"
+		>
+			<!-- <textarea v-model="code" /> -->
+			<text>{{ code }}</text>
 		</view>
-		<view v-for="n in 3" :key="n" class="parse-col">
-			<button>buddy</button>
-			<button>buddy</button>
-			<button>buddy</button>
-			<button>buddy</button>
+		<view v-for="(item, index) in colCount" :key="index" class="parse-col">
+			<button>{{ item }}</button>
 		</view>
 		<button class="common-btn">下一步</button>
 	</view>
 </template>
 
 <script>
+	import mixins from '../../common/mixin';
+    import {
+        mapState,
+        mapMutations
+    } from 'vuex'
 	export default {
+		mixins: [mixins],
+        computed: {
+            ...mapState(['mnemonicCodeList']),
+			colCount: function () {
+				return Math.ceil(this.mnemonicCodeList.length / 4)
+			}
+        },
+		data () {
+			return {
+				code: '长按可以黏贴助记词'
+			}
+		},
 		
 	}
 </script>
@@ -33,5 +53,11 @@
 .parse-col button {
 	background-color: #141b2f;
 	color: #999;
+}
+.mnemonic-textarea text {
+	color: #999999;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
 }
 </style>

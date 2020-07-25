@@ -34,13 +34,13 @@ export default {
 					_isAjax: true
 				},
                 success: (res) => {
-                    config.success(res);
+                    config.success(res.data);
                 },
                 fail: (res) => {
-                    config.fail(res);
+                    config.fail(res.data);
                 },
                 complete: (res) => {
-                    config.complete(res);
+                    config.complete(res.data);
                 }
             });
         }

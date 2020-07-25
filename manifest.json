@@ -144,7 +144,7 @@
             "timeout" : 20000
         },
         "devServer" : {
-            "https" : true
+            "https" : false
         }
     }
 }
