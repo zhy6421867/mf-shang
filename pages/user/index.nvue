@@ -42,13 +42,15 @@
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
-			<view class="list-item">
-				<img class="list-item-icon" src="./image/user8.png" alt="">
-				<view class="list-item-text">
-					安全中心
+			<navigator url="/pages/user/security/index">
+				<view class="list-item">
+					<img class="list-item-icon" src="./image/user8.png" alt="">
+					<view class="list-item-text">
+						安全中心
+					</view>
+					<uni-icons type="arrowright" color="#ffffff" size="15" />
 				</view>
-				<uni-icons type="arrowright" color="#ffffff" size="15" />
-			</view>
+			</navigator>
 			<view class="list-item">
 				<img class="list-item-icon" src="./image/user5.png" alt="">
 				<view class="list-item-text">

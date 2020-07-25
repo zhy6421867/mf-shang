@@ -42,6 +42,12 @@
 			}
 		},
 		{
+			"path": "pages/user/security/index",
+			"style": {
+			"navigationBarTitleText": "安全中心"
+			}
+		},
+		{
 			"path": "pages/ecology/contact/index",
 			"style": {
 			"navigationBarTitleText": "联系客服"
