@@ -1,15 +1,15 @@
 <template>
-	<view>
+	<view class="main">
 		<view>
-			<uni-card>
-				<text class="content-box-text" style="font-weight: bold;">实事掌握  生态建设</text>
-				<text class="content-box-text">有限的生命力  无限的全球熵</text>
-			</uni-card>
+			<view class="info">
+				<text class="content-box-text info-title" style="font-weight: bold;">实事掌握  生态建设</text>
+				<text class="content-box-text info-text">有限的生命力  无限的全球熵</text>
+			</view> 
 		</view>
 		<view class="list">
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon1.png" mode="" />
 					<view class="list-item-text">
 						区块浏览器
 					</view>
@@ -17,7 +17,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon2.png" mode="" />
 					<view class="list-item-text">
 						联系客服
 					</view>
@@ -25,7 +25,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon3.png" mode="" />
 					<view class="list-item-text">
 						Entropy Pro
 					</view>
@@ -33,7 +33,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon4.png" mode="" />
 					<view class="list-item-text">
 						我要申请
 					</view>
@@ -41,7 +41,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon5.png" mode="" />
 					<view class="list-item-text">
 						第三方平台
 					</view>
@@ -49,7 +49,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/author.png" mode="" />
+					<image class="list-item-icon" src="./image/icon6.png" mode="" />
 					<view class="list-item-text">
 						第三方钱包
 					</view>
@@ -98,6 +98,11 @@
 </script>
 
 <style scoped>
+	.main{
+		height: 96vh;
+		overflow: scroll;
+		background: #000000;
+	}
 	.list{
 		margin: 15px;
 		flex-wrap: wrap;
@@ -112,7 +117,7 @@
 	.list-item-box{
 		padding: 20px 0px;
 		border-radius: 10px;
-		background-color: #000000;
+		background-color: rgba(255, 255, 255, 0.14);
 	}
 	.list-item-icon{
 		width: 50px;
@@ -123,4 +128,23 @@
 	.list-item-text{
 		padding-top: 10px;
 	} 
+	.info{
+		width: 332px;
+		height: 148px;
+		margin: 0 auto;
+		color: #ffffff;
+		text-align: center;
+		border-radius: 4px;
+		background-size: contain;
+		background-image: url(image/bg.png);
+		background-repeat: no-repeat;
+	}
+	.info-title{
+		font-size: 20px;
+		padding-top: 40px;
+		letter-spacing:2px
+	}
+	.info-text{
+		font-size: 12px;
+	}
 </style>
