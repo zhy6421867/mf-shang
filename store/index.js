@@ -12,7 +12,8 @@ const store = new Vuex.Store({
 		colorIndex: 0,
 		colorList: ['#FF0000', '#00FF00', '#0000FF'],
 		createObj: {},
-		mnemonicCodeList: []
+		mnemonicCodeList: [],
+		loginInfo: {}
 	},
 	mutations: {
 		login(state, provider) {
@@ -40,6 +41,9 @@ const store = new Vuex.Store({
 		},
 		setMnemonicCodeList(state, data) {
 			state.mnemonicCodeList = data
+		},
+		setLoginInfo(state, data) {
+			state.loginInfo = Object.assign({}, data)
 		}
 	},
 	getters: {

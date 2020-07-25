@@ -25,6 +25,7 @@ export default {
                 type: 'json',
                 method: config.method,
                 crossOrigin: true,
+				withCredentials: true,
                 headers: {
                     // 'Content-Type': 'application/json',
                     'Accept': 'application/vnd.website.v1+json'

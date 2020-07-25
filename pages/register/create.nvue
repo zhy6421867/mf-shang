@@ -5,16 +5,16 @@
 				<input class="uni-input register-input-item" name="Add_PassportName" placeholder="请输入账户名" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input register-input-item" name="Password" placeholder="请输入8-16位钱包密码" />
+				<input class="uni-input register-input-item" name="Password" placeholder="请输入8-16位钱包密码" type="password" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input register-input-item" name="ConfirmPassword" placeholder="重复输入密码" />
+				<input class="uni-input register-input-item" name="ConfirmPassword" placeholder="重复输入密码" type="password" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input register-input-item" name="AdvancedPassword" placeholder="请输入8-16位支付密码" />
+				<input class="uni-input register-input-item" name="AdvancedPassword" placeholder="请输入8-16位支付密码" type="password" />
 			</view>
 			<view class="uni-form-item uni-column">
-				<input class="uni-input register-input-item" name="ConfirmAdvancedPassword" placeholder="重复输入支付密码" />
+				<input class="uni-input register-input-item" name="ConfirmAdvancedPassword" placeholder="重复输入支付密码" type="password" />
 			</view>
 			<view class="uni-btn-v">
 				<button form-type="submit" class="common-form-btn">创建</button>
@@ -33,7 +33,6 @@
 		methods: {
 			...mapMutations(['setCreateObj']),
 			createAccount: function(e) {
-				console.log(e.detail.value)
 				this.setCreateObj(e.detail.value)
 				uni.navigateTo({
 					url: '/pages/register/get-mnemonic-code'
