@@ -97,30 +97,30 @@
 		"background": "#070611"
 	},
 	"tabBar": {
-		"color": "#322E75",
-		"selectedColor": "#FFFFFF",
+		"color": "#515b6e",
+		"selectedColor": "#5cabf5",
 		"borderStyle": "black",
 		"backgroundColor": "#010102",
 		"list": [{
 				"pagePath": "pages/home/index",
 				"iconPath": "static/home.png",
-				"selectedIconPath": "static/home-on.png",
+				"selectedIconPath": "static/homes.png",
 				"text": "首页"
 			},
 			{
 				"pagePath": "pages/ecology/index",
-				"iconPath": "static/ecology.png",
-				"selectedIconPath": "static/ecologys.png",
+				"iconPath": "static/eco.png",
+				"selectedIconPath": "static/ecos.png",
 				"text": "生态建设"
 			}, {
 				"pagePath": "pages/exchange/index",
-				"iconPath": "static/extui.png",
-				"selectedIconPath": "static/extuiHL.png",
+				"iconPath": "static/trade.png",
+				"selectedIconPath": "static/trades.png",
 				"text": "熵值交易"
 			}, {
 				"pagePath": "pages/user/index",
-				"iconPath": "static/user.png",
-				"selectedIconPath": "static/users.png",
+				"iconPath": "static/mine.png",
+				"selectedIconPath": "static/mines.png",
 				"text": "我的"
 			}
 		]
