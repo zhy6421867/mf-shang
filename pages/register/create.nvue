@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="common-body">
 		<form class="register-form" @submit="createAccount">
 			<view class="uni-form-item uni-column">
 				<input class="uni-input" name="Add_PassportName" placeholder="请输入账户名" />

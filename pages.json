@@ -56,6 +56,18 @@
 			}
 		},
 		{
+			"path": "pages/register/get-mnemonic-code",
+			"style": {
+				"navigationBarTitleText": "备份助记词"
+			}
+		},
+		{
+			"path": "pages/register/parse-mnemonic-code",
+			"style": {
+				"navigationBarTitleText": "确认助记词"
+			}
+		},
+		{
 			"path": "pages/register/login",
 			"style": {
 				"navigationBarTitleText": "登录"
@@ -87,19 +99,19 @@
 		"pageOrientation": "portrait",
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "Entropy",
-		"navigationBarBackgroundColor": "#070611",
-		"backgroundColor": "#070611",
-		"backgroundColorTop": "#070611",
-		"backgroundColorBottom": "#070611",
+		"navigationBarBackgroundColor": "#0c1022",
+		"backgroundColor": "#0c1022",
+		"backgroundColorTop": "#0c1022",
+		"backgroundColorBottom": "#0c1022",
 		"mp-360": {
 			"navigationStyle": "custom"
 		},
-		"background": "#070611"
+		"background": "#0c1022"
 	},
 	"tabBar": {
 		"color": "#515b6e",
 		"selectedColor": "#5cabf5",
-		"borderStyle": "black",
+		"borderStyle": "#010102",
 		"backgroundColor": "#010102",
 		"list": [{
 				"pagePath": "pages/home/index",

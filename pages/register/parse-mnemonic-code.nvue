@@ -1,0 +1,37 @@
+<template>
+	<view class="common-body">
+		<text class="mnemonic-text">
+			请按顺序点击你的助记词，以便确认备份助记词的正确。
+		</text>
+		<view class="mnemonic-textarea">
+			<textarea />
+		</view>
+		<view v-for="n in 3" :key="n" class="parse-col">
+			<button>buddy</button>
+			<button>buddy</button>
+			<button>buddy</button>
+			<button>buddy</button>
+		</view>
+		<button class="common-btn">下一步</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style scoped>
+.parse-col {
+	flex-direction: row;
+	margin-top: 12px;
+}
+.parse-col + .parse-col {
+	margin-top: 12px;
+}
+.parse-col button {
+	background-color: #141b2f;
+	color: #999;
+}
+</style>

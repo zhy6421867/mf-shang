@@ -1,0 +1,35 @@
+<template>
+	<view class="common-body">
+		<text class="mnemonic-text">
+			强烈建议你将助记词抄写在纸上并保存在只有你知道的安全地方，任何人得到助记词都可以消费你的数字资产。
+		</text>
+		<view class="mnemonic-tip">
+			<text>
+				助记词用于恢复你的钱包，丢失它们你将永远失去钱包。
+			</text>
+		</view>
+		<text class="mnemonic-text">
+			长按下方助记词，可以复制到剪贴板。
+		</text>
+		<view class="mnemonic-textarea">
+			<textarea />
+		</view>
+		<button class="common-btn">下一步</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style scoped>
+.mnemonic-tip {
+	background-color: #346946;
+	padding: 10px;
+	color: #999999;
+	font-size: 14px;
+	margin: 12px 0;
+}
+</style>

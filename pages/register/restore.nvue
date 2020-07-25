@@ -101,7 +101,9 @@
 
 <style>
 .retore-body {
-	margin: 0 15px;
+	padding: 0 15px;
+	background-color: #0c1022;
+	height: 100%;
 }
 .retore-btns {
 	flex-direction: row;

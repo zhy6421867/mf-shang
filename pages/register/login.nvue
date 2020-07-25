@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="common-body">
 		<form class="register-form">
 			<view class="uni-form-item uni-column">
 				<input class="uni-input" name="nickname" placeholder="请输入用户ID" />

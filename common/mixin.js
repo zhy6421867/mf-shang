@@ -29,7 +29,10 @@ export default {
                     // 'Content-Type': 'application/json',
                     'Accept': 'application/vnd.website.v1+json'
                 },
-                data: config.data,
+                data: {
+					...config.data,
+					_isAjax: true
+				},
                 success: (res) => {
                     config.success(res);
                 },

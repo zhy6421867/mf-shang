@@ -25,6 +25,8 @@
 <style>
 .register-index {
 	padding-top: 200px;
+	height: 100%;
+	background-color: #0c1022;
 }
 .register-index-fc {
 	margin-top: 20px;
