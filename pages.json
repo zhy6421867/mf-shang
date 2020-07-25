@@ -36,6 +36,30 @@
 			}
 		},
 		{
+			"path": "pages/user/order/index",
+			"style": {
+				"navigationBarTitleText": "我的订单"
+			}
+		},
+		{
+			"path": "pages/ecology/contact/index",
+			"style": {
+				"navigationBarTitleText": "联系客服"
+			}
+		},
+		{
+			"path": "pages/ecology/platform/index",
+			"style": {
+				"navigationBarTitleText": "第三方平台"
+			}
+		},
+		{
+			"path": "pages/ecology/wallet/index",
+			"style": {
+				"navigationBarTitleText": "第三方钱包"
+			}
+		},
+		{
 			"path": "pages/register/index",
 			"style": {
 				"app-plus": {

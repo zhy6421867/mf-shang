@@ -1,5 +1,5 @@
 <template>
-	<view class="main">121212
+	<view class="main">
 		<view class="card">
 			<img class="card-author-icon"  
 					src="../../static/shuijiao.jpg" 
@@ -88,22 +88,21 @@
 	}
 	.card{  
 		width: 340px;
-		height: 180px;
+		height: 193px;
 		margin: 0 auto;
 		color: #ffffff;
 		text-align: center;
 		border-radius: 4px;
-		position: relative;
+		position: relative; 
+		background: url(./image/point-banner.gif) center;
 		background-size: contain;
-		/* background-image: url(../ecology/image/bg.png); */
-		background-color: #007AFF;
-		background-repeat: no-repeat;
+		background-repeat: round;
 	}
 	.card-author-icon{
-		width: 50px;
-		height: 50px;
+		width: 42px;
+		height: 42px;
 		display: block;
-		margin: 30px auto 0 auto;
+		margin: 30px auto 10px auto;
 		border-radius: 50%;
 	}
 	.mobile-mobile{
@@ -128,8 +127,8 @@
 		justify-content: center;
 	}
 	.card-footer-item-icon{
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 		margin-right: 4px;
 	}
 	.card-id{

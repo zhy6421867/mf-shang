@@ -22,8 +22,7 @@
 			<view class="info-title">激活账户</view>
 			<view class="info-text">授信令牌是社区身份的标识，在Entropy网络及各类延展DAPP中具有无障碍的通行能力和资产行使权力，未来Entropy还将在生态圈内外拥有各类服务特权，广泛用于互联网乃至实体经济中。</view>
 			<view class="info-submit">立即激活</view>
-		</view>
-		<view class="timg"></view>
+		</view> 
 
 		<image class="image-code" @click="handleCollection" src="./image/code.png" mode="code.png" />
 
@@ -81,16 +80,19 @@
 .main {
 	height: 96vh;
 	overflow: scroll;
-	background: #000000;
-}
+	background: url('./image/home-bg.gif') center;
+	background-size: contain;
+	background-repeat: round;
+} 
 .card-body{
 	width: 340px;
-	height: 150px;
+	height: 180px;
 	margin: 0 auto;
 	color: #ffffff;
 	text-align: center;
 	box-sizing: border-box;
-	background: url('./image/bg.png');
+	background: url('./image/home-banner.gif');
+	background-size: cover;
 }
 .card-body-title{
 	font-size: 16px;
@@ -111,7 +113,7 @@
 }
 .notice{
 	width: 340px;
-	margin: 0 auto;
+	margin: 20px auto 0 auto;
 }
 .info{
 	width: 340px;
@@ -136,15 +138,7 @@
 	border-radius: 2px;
 	text-align: center;
 	background-color: #409EFF
-}
-.timg {
-	height: 180px;
-	position: fixed;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	/* background: url('./image/webp.webp') center; */
-}
+} 
 .image-code{
 	width: 22px;
 	height: 22px;
