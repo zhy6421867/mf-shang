@@ -22,49 +22,49 @@
 		</view>
 		<view class="list">
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user1.png" alt="">
 				<view class="list-item-text">
 					我的团队
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user2.png" alt="">
 				<view class="list-item-text">
 					账户管理
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user3.png" alt="">
 				<view class="list-item-text">
 					收款方式
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user8.png" alt="">
 				<view class="list-item-text">
 					安全中心
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user5.png" alt="">
 				<view class="list-item-text">
 					邀请好友
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user6.png" alt="">
 				<view class="list-item-text">
 					关于我们
 				</view>
 				<uni-icons type="arrowright" color="#ffffff" size="15" />
 			</view>
 			<view class="list-item">
-				<img class="list-item-icon" src="../../static/60x60.png" alt="">
+				<img class="list-item-icon" src="./image/user7.png" alt="">
 				<view class="list-item-text">
 					设置
 				</view>
@@ -161,9 +161,9 @@
 		border-bottom: none
 	}
 	.list-item-icon{
-		width: 26px;
-		height: 26px;
-		margin-right: 6px;
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
 	}
 	.list-item-text{
 		flex: 1;

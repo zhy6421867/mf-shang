@@ -33,7 +33,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/icon4.png" mode="" />
+					<image class="list-item-icon" src="./image/icon6.png" mode="" />
 					<view class="list-item-text">
 						我要申请
 					</view>
@@ -49,7 +49,7 @@
 			</view>
 			<view class="list-item">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/icon6.png" mode="" />
+					<image class="list-item-icon" src="./image/icon4.png" mode="" />
 					<view class="list-item-text">
 						第三方钱包
 					</view>
