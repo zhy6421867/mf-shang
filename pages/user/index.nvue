@@ -1,5 +1,5 @@
 <template>
-	<view class="main">121212
+	<view class="main">
 		<view class="card">
 			<img class="card-author-icon"  
 					src="../../static/shuijiao.jpg" 
@@ -8,12 +8,12 @@
 			<view class="mobile-address">0xhuihfuiher89y9w89eweuiwuiscbdhs87</view>
 			<view class="card-footer">
 				<view class="card-footer-item">
-					<img class="card-footer-item-icon" src="../../static/60x60.png" mode="" />
+					<img class="card-footer-item-icon" src="./image/user9.png" mode="" />
 					身份管理
 				</view>
 				|
 				<view class="card-footer-item">
-					<img class="card-footer-item-icon" src="../../static/60x60.png" mode="" />
+					<img class="card-footer-item-icon" src="./image/user10.png" mode="" />
 					地址本
 				</view>
 			</view>
@@ -88,22 +88,21 @@
 	}
 	.card{  
 		width: 340px;
-		height: 180px;
+		height: 193px;
 		margin: 0 auto;
 		color: #ffffff;
 		text-align: center;
 		border-radius: 4px;
-		position: relative;
+		position: relative; 
+		background: url(./image/point-banner.gif) center;
 		background-size: contain;
-		/* background-image: url(../ecology/image/bg.png); */
-		background-color: #007AFF;
-		background-repeat: no-repeat;
+		background-repeat: round;
 	}
 	.card-author-icon{
-		width: 50px;
-		height: 50px;
+		width: 42px;
+		height: 42px;
 		display: block;
-		margin: 30px auto 0 auto;
+		margin: 30px auto 10px auto;
 		border-radius: 50%;
 	}
 	.mobile-mobile{
@@ -128,9 +127,14 @@
 		justify-content: center;
 	}
 	.card-footer-item-icon{
-		width: 20px;
-		height: 20px;
-		margin-right: 4px;
+		width: 16px;
+		height: 16px;
+		margin-right: 6px;
+		position: relative;
+		top: -1px;
+	}
+	.card-footer-item:nth-child(2) .card-footer-item-icon{
+		top: -2px;
 	}
 	.card-id{
 		position: absolute;

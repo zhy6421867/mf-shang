@@ -11,7 +11,7 @@
 			</view>
 		</view>
 		<view class="order-title">
-			<text class="order-title-label">我的订单</text>
+			<text class="order-title-label" @click="handleOrder">我的订单</text>
 			<uni-icons type="arrowright" color="#ffffff" size="15" />
 		</view>
 		<view class="tab">
@@ -295,6 +295,15 @@
                 }
             });
           },
+		  handleOrder() {
+				uni.navigateTo({
+					url: '/pages/user/order/index',
+					fail:function(err){
+						console.log(err)
+					}
+				})
+			  
+		  }
 		}
 	}
 </script>

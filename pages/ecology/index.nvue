@@ -7,7 +7,7 @@
 			</view> 
 		</view>
 		<view class="list">
-			<view class="list-item">
+			<view class="list-item" @click="handleList(0)">
 				<view class="list-item-box">
 					<image class="list-item-icon" src="./image/icon1.png" mode="" />
 					<view class="list-item-text">
@@ -15,7 +15,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="list-item">
+			<view class="list-item" @click="handleList(1)">
 				<view class="list-item-box">
 					<image class="list-item-icon" src="./image/icon2.png" mode="" />
 					<view class="list-item-text">
@@ -23,7 +23,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="list-item">
+			<view class="list-item" @click="handleList(2)">
 				<view class="list-item-box">
 					<image class="list-item-icon" src="./image/icon3.png" mode="" />
 					<view class="list-item-text">
@@ -31,15 +31,15 @@
 					</view>
 				</view>
 			</view>
-			<view class="list-item">
+			<view class="list-item" @click="handleList(3)">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/icon6.png" mode="" />
+					<image class="list-item-icon" src="./image/icon4.png" mode="" />
 					<view class="list-item-text">
 						我要申请
 					</view>
 				</view>
 			</view>
-			<view class="list-item">
+			<view class="list-item" @click="handleList(4)">
 				<view class="list-item-box">
 					<image class="list-item-icon" src="./image/icon5.png" mode="" />
 					<view class="list-item-text">
@@ -47,21 +47,70 @@
 					</view>
 				</view>
 			</view>
-			<view class="list-item">
+			<view class="list-item" @click="handleList(5)">
 				<view class="list-item-box">
-					<image class="list-item-icon" src="./image/icon4.png" mode="" />
+					<image class="list-item-icon" src="./image/icon6.png" mode="" />
 					<view class="list-item-text">
 						第三方钱包
 					</view>
 				</view>
 			</view>
-		</view>
+		</view> 
 	</view>
 </template>
 
-<script>
+<script> 
 	export default {
-		
+		data() {
+			return { 
+				
+			}
+		},
+		onLoad() {
+			
+		},
+		onReady() { 
+		},
+		methods: { 
+			handleTips() {
+				uni.showToast({
+					title: '功能开发中',
+					icon: 'none',
+					mask: true,
+					duration: 2000
+				});
+			},
+			handleList(index) {
+				switch(index) {
+				     case 0:
+						this.handleTips()
+				        break; 
+				     case 1: 
+						uni.navigateTo({
+							url: '/pages/ecology/contact/index'
+						})
+				        break; 
+				     case 2:
+						this.handleTips()
+				        break; 
+				     case 3:
+						this.handleTips()
+				        break; 
+				     case 4:
+						uni.navigateTo({
+							url: '/pages/ecology/platform/index'
+						}) 
+				        break; 
+				     case 5:
+						uni.navigateTo({
+							url: '/pages/ecology/wallet/index'
+						})  
+				        break;  
+				     default: 
+						this.handleTips()
+				} 
+			}
+		}
 	}
 </script>
 
@@ -72,7 +121,8 @@
 		background: #000000;
 	}
 	.list{
-		margin: 15px;
+		padding: 20px 0px 90px 0px;
+		margin: 0px 15px;
 		flex-wrap: wrap;
 		flex-direction: initial;
 	}
@@ -84,12 +134,12 @@
 	}
 	.list-item-box{
 		padding: 20px 0px;
-		border-radius: 10px;
+		border-radius: 4px;
 		background-color: rgba(255, 255, 255, 0.14);
 	}
 	.list-item-icon{
-		width: 50px;
-		height: 50px; 
+		width: 40px;
+		height: 40px; 
 		margin: 0 auto;
 		display: inline-block;
 	}
@@ -98,13 +148,13 @@
 	} 
 	.info{
 		width: 332px;
-		height: 148px;
+		height: 166px;
 		margin: 0 auto;
 		color: #ffffff;
 		text-align: center;
 		border-radius: 4px;
 		background-size: contain;
-		background-image: url(image/bg.png);
+		background-image: url(image/asset.gif);
 		background-repeat: no-repeat;
 	}
 	.info-title{
