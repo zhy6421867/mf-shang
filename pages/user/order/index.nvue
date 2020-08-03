@@ -1,0 +1,152 @@
+<template>
+	<view class="main">  
+		<view class="tab">
+			<view class="tab-item tab-item-on">
+				全部
+			</view>
+			<view class="tab-item">
+				进行中
+			</view>
+			<view class="tab-item">
+				已完成
+			</view>
+		</view> 
+		<view class="list">
+			<view class="list-item">
+				<view class="list-item-label">
+					<view class="top">
+						<text class="text">数量：</text>
+						88.000 ETV
+					</view>
+					<view class="bottom">
+						<text class="text">数量：</text>
+						88.000 ETV
+					</view>
+				</view>
+				<view class="list-item-value">
+					23.89
+					<text class="text">USDK</text>
+				</view>
+			</view>
+			<view class="list-item">
+				<view class="list-item-label">
+					<view class="top">
+						<text class="text">数量：</text>
+						88.000 ETV
+					</view>
+					<view class="bottom">
+						<text class="text">数量：</text>
+						88.000 ETV
+					</view>
+				</view>
+				<view class="list-item-value">
+					23.89
+					<text class="text">USDK</text>
+				</view>
+			</view>
+		</view> 
+	</view>
+</template>
+
+<script>  
+
+	export default {
+		data() {
+			return { 
+				
+			}
+		},
+		onLoad() {
+			
+		},
+		onReady() { 
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style scoped>
+	.main{
+		height: 96vh;
+		overflow: scroll;
+		background: #000000;
+	}
+	uni-canvas{
+		width: 100% !important;
+	}
+	.qiun-charts{
+		padding: 14px 0px;
+		background-color: rgba(255, 255, 255, 0.14)
+	}
+	.order-title{
+		display: flex;
+		color: #ffffff;
+		padding: 15px;
+		flex-direction: row;
+	}
+	.order-title-label{
+		flex: 1;
+	}
+	.tab{
+		display: flex;
+		flex-direction: row;
+		background-color: rgba(255, 255, 255, 0.14)
+	}
+	.tab-item{
+		flex: 1;
+		padding: 10px 20px;
+		color: rgb(164, 168, 187);
+		text-align: center;
+	}
+	.tab-item-on{
+		color: #ffffff;
+		background-color: rgba(255, 255, 255, 0.16)
+	}
+	.list{
+		
+	}
+	.list-item{
+		color: #ffffff;
+		display: flex;
+		padding: 15px 15px 15px 15px;
+		flex-direction: row;
+		border-bottom: 1px solid #0e0e0e;
+	}
+	.list-item-label{
+		flex: 1;
+	}
+	.list-item-label .top{ 
+		height: 24px;
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		align-items: baseline;
+	}
+	.list-item-label .bottom{
+		height: 24px;
+		color: #929292;
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		align-items: baseline;
+	}
+	.list-item-label .text{
+		font-size: 12px; 
+	}
+	
+	.list-item-value{
+		color: #409EFF;
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		align-items: baseline;
+		padding-top: 10px;
+	}
+	.list-item-value .text{
+		color: #ffffff;
+		margin-left: 4px;
+		font-size: 12px;
+	}
+</style>

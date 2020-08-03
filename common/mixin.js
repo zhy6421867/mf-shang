@@ -25,19 +25,23 @@ export default {
                 type: 'json',
                 method: config.method,
                 crossOrigin: true,
+				withCredentials: true,
                 headers: {
                     // 'Content-Type': 'application/json',
                     'Accept': 'application/vnd.website.v1+json'
                 },
-                data: config.data,
+                data: {
+					...config.data,
+					_isAjax: true
+				},
                 success: (res) => {
-                    config.success(res);
+                    config.success(res.data);
                 },
                 fail: (res) => {
-                    config.fail(res);
+                    config.fail(res.data);
                 },
                 complete: (res) => {
-                    config.complete(res);
+                    config.complete(res.data);
                 }
             });
         }

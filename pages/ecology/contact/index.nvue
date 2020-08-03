@@ -1,0 +1,70 @@
+<template>
+	<view class="main">
+		<view class="content">
+			<input class="content-input" 
+					type="text" 
+					placeholder="请输入您要反馈的问题" />
+			<textarea class="content-textarea" 
+						placeholder="请输入您要反馈的内容和建议..." 
+						 />
+			<view class="submit">
+				提交反馈
+			</view>
+		</view>
+	</view>
+</template>
+
+<script> 
+	export default {
+		data() {
+			return { 
+				
+			}
+		},
+		onLoad() {
+			
+		},
+		onReady() { 
+		},
+		methods: { 
+			
+		}
+	}
+</script>
+
+<style scoped>
+	.main{
+		height: 96vh;
+		overflow: scroll;
+		background: #000000;
+	}
+	.content{
+		color: #ffffff;
+		margin: 15px;
+		font-size: 16px;
+	}
+	.content-input{ 
+		padding: 10px;
+		height: 46px;
+		border-radius: 4px;
+		background-color: rgba(255, 255, 255, 0.14);
+		margin-bottom: 10px;
+	}
+	.content-textarea{ 
+		width: 100%;
+		padding: 10px;
+		border-radius: 4px;
+		background-color: rgba(255, 255, 255, 0.14);
+	}
+	.submit{
+		width: 180px;
+		height: 40px;
+		color: #00ff38;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 4px;
+		font-weight: bold;
+		margin: 30px auto 0px auto;
+		background-color: rgba(255, 255, 255, 0.18);
+	}
+</style>

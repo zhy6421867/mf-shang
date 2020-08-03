@@ -297,7 +297,10 @@
           },
 		  handleOrder() {
 				uni.navigateTo({
-					url: '/pages/user/order/index'
+					url: '/pages/user/order/index',
+					fail:function(err){
+						console.log(err)
+					}
 				})
 			  
 		  }

@@ -1,36 +1,78 @@
 <template>
-	<view>
-		<view>
-			<uni-card>
-			</uni-card>
+	<view class="main">
+		<view class="card">
+			<img class="card-author-icon"  
+					src="../../static/shuijiao.jpg" 
+					mode="" />
+			<view class="mobile-mobile">13800138000</view>
+			<view class="mobile-address">0xhuihfuiher89y9w89eweuiwuiscbdhs87</view>
+			<view class="card-footer">
+				<view class="card-footer-item">
+					<img class="card-footer-item-icon" src="./image/user9.png" mode="" />
+					身份管理
+				</view>
+				|
+				<view class="card-footer-item">
+					<img class="card-footer-item-icon" src="./image/user10.png" mode="" />
+					地址本
+				</view>
+			</view>
+			<view class="card-id">ID：616267167</view>
+			<view class="card-see">查看子账户</view>
 		</view>
-		<view>
-			<uni-card>
-				<uni-list>
-					<uni-list-item>
-						<text>我的团队</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>账户管理</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>收款方式</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>安全中心</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>邀请好友</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>关于我们</text>
-					</uni-list-item>
-					<uni-list-item>
-						<text>设置</text>
-					</uni-list-item>
-				</uni-list>
-			</uni-card>
-		</view>
+		<view class="list">
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user1.png" alt="">
+				<view class="list-item-text">
+					我的团队
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user2.png" alt="">
+				<view class="list-item-text">
+					账户管理
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user3.png" alt="">
+				<view class="list-item-text">
+					收款方式
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<navigator url="/pages/user/security/index">
+				<view class="list-item">
+					<img class="list-item-icon" src="./image/user8.png" alt="">
+					<view class="list-item-text">
+						安全中心
+					</view>
+					<uni-icons type="arrowright" color="#ffffff" size="15" />
+				</view>
+			</navigator>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user5.png" alt="">
+				<view class="list-item-text">
+					邀请好友
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user6.png" alt="">
+				<view class="list-item-text">
+					关于我们
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/user7.png" alt="">
+				<view class="list-item-text">
+					设置
+				</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+		</view>  
 	</view>
 </template>
 
@@ -40,6 +82,99 @@
 	}
 </script>
 
-<style>
-
+<style scoped> 
+	.main{
+		height: 96vh;
+		overflow: scroll;
+		background: #000000;
+	}
+	.card{  
+		width: 340px;
+		height: 193px;
+		margin: 0 auto;
+		color: #ffffff;
+		text-align: center;
+		border-radius: 4px;
+		position: relative; 
+		background: url(./image/point-banner.gif) center;
+		background-size: contain;
+		background-repeat: round;
+	}
+	.card-author-icon{
+		width: 42px;
+		height: 42px;
+		display: block;
+		margin: 30px auto 10px auto;
+		border-radius: 50%;
+	}
+	.mobile-mobile{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.mobile-address{
+		font-size: 12px;
+	}
+	.card-footer{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: initial;
+		padding-top: 10px;
+	}
+	.card-footer-item{
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: initial;
+		justify-content: center;
+	}
+	.card-footer-item-icon{
+		width: 16px;
+		height: 16px;
+		margin-right: 6px;
+		position: relative;
+		top: -1px;
+	}
+	.card-footer-item:nth-child(2) .card-footer-item-icon{
+		top: -2px;
+	}
+	.card-id{
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		font-size: 12px;
+	}
+	.card-see{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 12px;
+	} 
+	.list{
+		width: 340px; 
+		margin: 30px auto 0 auto;
+		color: #ffffff;
+	}
+	.list-item{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: initial;
+		padding: 10px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+	}
+	.list-item:last-child{
+		border-bottom: none
+	}
+	.list-item-icon{
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+	}
+	.list-item-text{
+		flex: 1;
+	}
+	.list-item i{
+		
+	}
 </style>

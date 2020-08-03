@@ -1,0 +1,85 @@
+<template>
+	<view class="main">  
+		<view class="list">
+			<view class="list-item list-top"> 
+				<view class="list-item-text">
+					平台
+				</view>
+				官网地址
+			</view>
+			
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/logo.png" alt="">
+				<view class="list-item-text">
+					火币钱包
+				</view>
+				<view class="list-item-url">https://uniapp.dcloud.io</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view>
+			<view class="list-item">
+				<img class="list-item-icon" src="./image/logo.png" alt="">
+				<view class="list-item-text">
+					imToken
+				</view>
+				<view class="list-item-url">https://uniapp.dcloud.io</view>
+				<uni-icons type="arrowright" color="#ffffff" size="15" />
+			</view> 
+		</view>  
+	</view>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style scoped> 
+	.main{
+		height: 96vh;
+		overflow: scroll;
+		background: #000000;
+	}
+	.mobile-mobile{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.mobile-address{
+		font-size: 12px;
+	}  
+	.list{
+		width: 340px; 
+		margin: 30px auto 0 auto;
+		color: #ffffff;
+	}
+	.list-top{
+		color: #CCCCCC;
+	}
+	.list-item{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: initial;
+		padding: 10px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+	}
+	.list-item:last-child{
+		border-bottom: none
+	}
+	.list-item-icon{
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+	}
+	.list-item-text{
+		flex: 1;
+	}
+	.list-item-url{
+		color: #CCCCCC;
+		font-size: 12px;
+		padding-right: 4px;
+	}
+	.list-item i{
+		
+	}
+</style>

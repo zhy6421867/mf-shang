@@ -1,0 +1,29 @@
+.common-body {
+	padding: 12px 15px;
+	background-color: #0c1022;
+	height: 100%;
+}
+.mnemonic-text {
+	color: #999999;
+}
+.mnemonic-textarea {
+	background-color: #141b2f;
+	margin-top: 12px;
+}
+.common-btn {
+	background-color: #2c354e;
+	color: #76ed81;
+	width: 200px;
+	margin-top: 40px;
+}
+.common-form-btn {
+	background-color: #2c354e;
+	color: #76ed81;
+	width: 200px;
+	margin: 40px auto!important;
+}
+.register-input-item {
+	background-color: #141b2f;
+	color: #999999;
+	height: 50px;
+}

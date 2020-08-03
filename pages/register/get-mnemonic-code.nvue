@@ -1,0 +1,99 @@
+<template>
+	<view class="common-body">
+		<text class="mnemonic-text">
+			强烈建议你将助记词抄写在纸上并保存在只有你知道的安全地方，任何人得到助记词都可以消费你的数字资产。
+		</text>
+		<view class="mnemonic-tip">
+			<text>
+				助记词用于恢复你的钱包，丢失它们你将永远失去钱包。
+			</text>
+		</view>
+		<text class="mnemonic-text">
+			长按下方助记词，可以复制到剪贴板。
+		</text>
+		<view
+			class="mnemonic-textarea"
+			v-clipboard:copy="code"
+			v-clipboard:success="(type) => onCopyResult('success')"
+			v-clipboard:error="(type) => onCopyResult('error')"
+		>
+			<text>{{ code }}</text>
+		</view>
+		<button class="common-btn" @click="goParse">下一步</button>
+	</view>
+</template>
+
+<script>
+	import mixins from '../../common/mixin';
+	import {
+	    mapMutations
+	} from 'vuex'
+	export default {
+		mixins: [mixins],
+		onLoad:function(){
+			this.handleLoad()
+		},
+		data () {
+			return {
+				code: ''
+			}
+		},
+		methods: {
+			...mapMutations(['setMnemonicCodeList']),
+			onCopyResult(type) {
+				if (type==='success') { 
+					uni.showToast({
+							title:"复制成功" 
+						})
+				} else { 
+					uni.showToast({
+							title:"复制失败" 
+						})
+				}
+			},
+			handleLoad: function() {
+				this.request({
+					url: 'api/v2/userMnemonicCodeApi?cmd=getMnemonicCode',
+					method: 'GET',
+					data: {},
+					success: (response) => {
+						if (response.flag) {
+							this.code = response.data.mnemonicCodeList.join(' ')
+							this.setMnemonicCodeList(response.data.mnemonicCodeList)
+						}
+					},
+					fail: (response) => {
+
+					},
+					complete: () => {
+						uni.hideLoading();
+					}
+				});
+			},
+			goParse () {
+				uni.navigateTo({
+					url: '/pages/register/parse-mnemonic-code'
+				})
+			}
+		}
+	}
+</script>
+
+<style scoped>
+.mnemonic-tip {
+	background-color: #346946;
+	padding: 10px;
+	color: #999999;
+	font-size: 14px;
+	margin: 12px 0;
+}
+.mnemonic-tip text {
+	color: #FFFFFF;
+}
+.mnemonic-textarea text {
+	color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
+}
+</style>
